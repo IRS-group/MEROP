@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+ <arg name="deadz" default="0.15" />
+
+ <!-- small description about your node -->
+ 
+ <node pkg="teleop_twist_joy" type="teleop_node" name="teleop_twist_joy" respawn="false" output="screen">
+    <rosparam command="load" file="$(find feedback)/config/merop.yaml" />
+    <remap from="/cmd_vel" to="/cmd_vel_merop"/>
+    <remap from="/joy" to="/merop/joy"/>
+ </node>
+
+ <!--node pkg="experiment_record" type="merop_rosbag_node.py" name="record_rosbag" respawn="false" output="screen">
+ </node>
+
+ <node pkg="map_to_img" type="MapToImage.py" name="maptoimage" respawn="false" output="screen">
+ </node-->
+
+</launch>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+ <arg name="deadz" default="0.15" />
+
+ <!-- small description about your node -->
+ 
+ <node pkg="feedback" type="fake_data_publisher.py" name="fake_data_publisher" respawn="false" output="screen">
+    <rosparam file="$(find feedback)/config/config_fake_data.yaml" command="load" />
+ </node>
+</launch>

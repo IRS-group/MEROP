@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="device" default="/dev/video12" />
+  <arg name="width" default="672" />
+  <arg name="height" default="376" />
+  <arg name="format" default="YV12" />
+  <arg name="image" default="/hazard_front/zed_node_front/rgb/image_rect_color" />
+
+  <node name="image_loop_front_bottom" pkg="image_to_v4l2loopback" type="stream"
+    output="screen"
+    required="true" >
+    <param name="device" value="$(arg device)" />
+    <param name="width" value="$(arg width)" />
+    <param name="height" value="$(arg height)" />
+    <param name="format" value="$(arg format)" />
+    <remap from="/image" to="$(arg image)"/>
+  </node>
+</launch>

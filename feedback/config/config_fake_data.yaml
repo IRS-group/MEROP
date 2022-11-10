@@ -1,0 +1,4 @@
+# parameters to adjust fake data publisher
+loop_rate: 50.0 #Hz - publish frequency of the node 
+full_rotation_duration: 15.0 # seconds - how long it takes to complete a full conic movement
+vib_duration: 5.0 # seconds - how long a vibration pattern lasts

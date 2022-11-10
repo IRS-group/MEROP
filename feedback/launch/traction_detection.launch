@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <!--rosparam command="load" file="$(find feedback)/config/traction_detection.yaml" /-->
+  <node pkg="feedback" type="traction_detector.py" name="traction_detection" respawn="false" output="screen">
+    <!--remap from="/robot_platform_velocity_controller/odom" to="/husky_velocity_controller/odom"/-->
+    <rosparam command="load" file="$(find feedback)/config/traction_detection.yaml" />
+  </node>
+</launch>

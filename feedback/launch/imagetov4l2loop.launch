@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+   <include file="$(find image_to_v4l2loopback)/launch/back_image.launch" />
+   <include file="$(find image_to_v4l2loopback)/launch/front_bottom_image.launch" /> 
+   <!--include file="$(find image_to_v4l2loopback)/launch/front_left_image.launch" /-->  
+   <include file="$(find image_to_v4l2loopback)/launch/front_right_image.launch" /> 
+</launch>
+

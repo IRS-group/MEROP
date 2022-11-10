@@ -1,0 +1,3 @@
+camera_info: /hazard_front/zed_node_front/rgb/camera_info
+image: /hazard_front/zed_node_front/rgb/image_rect_color/compressed
+video_device: /dev/video12

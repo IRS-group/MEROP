@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="map_to_img" type="MapToImage.py" name="map_to_image" respawn="false" output="screen">
+    <remap from="/map" to="/rtabmap/proj_map"/>
+  </node>
+</launch>

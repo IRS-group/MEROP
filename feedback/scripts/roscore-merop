@@ -1,0 +1,14 @@
+source /opt/ros/kinetic/setup.bash
+source /home/merop/merop_ws/devel/setup.bash
+
+ROS_ROOT=/opt/ros/kinetic/
+ROS_DISTRO=kinetic
+ROS_PACKAGE_PATH=/opt/ros/kinetic/share:/home/merop/merop_ws/src
+ROS_PORT=11311
+ROS_MASTER_URI=http://10.2.0.24:11311
+ROS_IP=10.2.0.50
+ROS_HOSTNAME=merop
+CMAKE_PREFIX_PATH=/home/merop/merop_ws/devel:/opt/ros/kinetic
+PATH=/home/merop/bin:/home/merop/.local/bin:/opt/ros/kinetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+LD_LIBRARY_PATH=/home/merop/merop_ws/devel/lib:/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu
+PYTHONPATH=/home/merop/merop_ws/devel/lib/python2.7/dist-packages:/opt/ros/kinetic/lib/python2.7/dist-packages

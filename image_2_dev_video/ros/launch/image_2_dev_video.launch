@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+ <node pkg="image_2_dev_video" type="image_2_dev_video_node" name="image_2_dev_video_hazard_front"
+ respawn="false" output="screen">
+   <rosparam command="load" file="$(find image_2_dev_video)/ros/config/hazard_front.yaml" />
+ </node>
+
+ <node pkg="image_2_dev_video" type="image_2_dev_video_node" name="image_2_dev_video_hazard_back"
+ respawn="false" output="screen">
+   <rosparam command="load" file="$(find image_2_dev_video)/ros/config/hazard_back.yaml" />
+ </node>
+
+
+ <node pkg="image_2_dev_video" type="image_2_dev_video_node" name="image_2_dev_video_stereo_right"
+ respawn="false" output="screen" >
+   <rosparam command="load" file="$(find image_2_dev_video)/ros/config/stereo_right.yaml" />
+ </node>
+
+ <node pkg="image_2_dev_video" type="image_2_dev_video_node" name="image_2_dev_video_stereo_left"
+ respawn="false" output="screen" >
+   <rosparam command="load" file="$(find image_2_dev_video)/ros/config/stereo_left.yaml" />
+ </node>
+
+</launch>

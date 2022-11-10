@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="device" default="/dev/video10" />
+  <arg name="format" default="YV12" />
+  <arg name="image" default="/stereo_camera/left/image_raw" />
+
+  <node name="image_loopback" pkg="image_to_v4l2loopback" type="stream"
+    output="screen"
+    required="true" >
+    <param name="device" value="$(arg device)" />
+    <param name="format" value="$(arg format)" />
+    <param name="image" value="$(arg image)" />
+  </node>
+</launch>

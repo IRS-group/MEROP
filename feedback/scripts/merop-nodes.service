@@ -1,0 +1,15 @@
+[Unit]
+Description=Launcher of MEROP base rosnodes: fake data publisher, joynode, maptoimage, recordbag, rosbridge, teleoptwisttojoy
+After=network-online.target
+
+[Service]
+EnvironmentFile=/etc/default/roscore-merop
+Type=exec
+User=merop
+Group=merop
+ExecStart=/home/merop/merop_ws/src/feedback/scripts/rosnodes.sh
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

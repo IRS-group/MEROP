@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+    <node name="transformed_imu_publisher" pkg="feedback" type="transformed_imu_publisher.py" respawn="true">
+	<!-- <remap from="/imu/data" to="/raposang/imu/data"/> -->
+    </node>			
+</launch>

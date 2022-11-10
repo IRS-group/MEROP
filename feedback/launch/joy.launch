@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<launch>
+ <arg name="deadz" default="0.15" />
+
+ <!-- small description about your node -->
+ 
+ <node pkg="joy" type="joy_node" name="joy_node_merop" respawn="false" output="screen">
+    <param name="deadzone" type="double" value="$(arg deadz)" />
+    <remap from="/joy" to="/merop/joy"/>
+ </node>
+</launch>

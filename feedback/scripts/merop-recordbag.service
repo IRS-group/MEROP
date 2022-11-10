@@ -1,0 +1,14 @@
+[Unit]
+Description=Start rosnode record_bag, to record rosbags
+After=merop-imageConv.service
+
+[Service]
+Type=simple
+User=merop
+Group=merop
+ExecStart=/home/merop/merop_ws/src/feedback/scripts/recordRosbag.sh
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

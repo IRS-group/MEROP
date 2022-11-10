@@ -1,0 +1,15 @@
+[Unit]
+Description=Tranfer Image from video1# to video2# to use in docker
+Requires=merop-v4l2loop.service
+After=merop-v4l2loop.service
+
+[Service]
+Type=simple
+User=merop
+Group=merop
+ExecStart=/home/merop/ros_ws/src/merop_ws/feedback/scripts/imageconversion.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

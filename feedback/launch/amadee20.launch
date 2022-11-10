@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<launch>
+ <arg name="deadz" default="0.15" />
+
+
+   <!--<node pkg="joy" type="joy_node" name="joy_node" respawn="false" output="screen">
+    <param name="deadzone" type="double" value="$(arg deadz)" />
+   </node>-->
+   <node pkg="teleop_twist_joy" type="teleop_node" name="teleop_twist_joy" respawn="false" output="screen">
+     <rosparam command="load" file="$(find feedback)/config/merop.yaml" />   
+     <remap from="/cmd_vel" to="/cmd_vel_merop"/>
+     <remap from="/joy" to="/merop/joy"/>
+   </node>
+
+  <group ns="merop">
+    <node pkg="feedback" type="fake_data_publisher.py" name="fake_data_publisher" respawn="false" output="screen">
+      <rosparam file="$(find feedback)/config/config_fake_data.yaml" command="load" />
+    </node>
+  </group>
+
+  <!--<node pkg="experiment_record" type="merop_rosbag_node.py" name="record_rosbag" respawn="false" output="screen"/-->
+  <node pkg="map_to_img" type="MapToImage.py" name="maptoimage" respawn="false"/>
+
+  <!-- laser to pose is not necessary if we have another source of pose: gnss/visual -->
+  <!--include file="$(find feedback)/launch/laser_to_pose.launch" /-->
+  <include file="$(find feedback)/launch/traction_detection.launch" /> 
+  <include file="$(find feedback)/launch/transform_imu.launch" />
+  <include file="$(find feedback)/launch/amadee20_rosbridge.launch" />
+</launch>

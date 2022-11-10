@@ -1,0 +1,8 @@
+debug_mode: False                 # will show graphs of the position differences; differences and thresholds
+minimum_threshold_linear: 0.25    # difference between real and expected movement that is considered traction loss
+minimum_threshold_angular: 0.13   # difference between real and expected movement that is considered traction loss
+threshold_factor: 0.75            # 0.01 means that there will only be a fixed threshold, and this factor will not be used (not needed)
+                                  # 0.7  allow to detect only the ones that we are completely confident/sure, but might not detect "smaller" traction losses
+frequency: 5                      # Hz - mercator: higher frequencies generate a lot of noise in the gnss informartion
+time_moving_window: 1             # seconds - moving window for noise filtering = 5 samples/window
+

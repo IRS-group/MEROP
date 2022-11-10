@@ -1,0 +1,6 @@
+#!/usr/bin/env python
+
+import image_2_dev_video_ros.image_2_dev_video_node
+
+if __name__ == '__main__':
+ image_2_dev_video_ros.image_2_dev_video_node.main()

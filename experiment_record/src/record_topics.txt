@@ -1,0 +1,2 @@
+/client_count /cmd_vel /cmd_vel_merop /connected_clients /e_stop /elevation_color_map/compressed /elevation_map/compressed /gnss/pose /hazard_front/zed_node_front/rgb/image_rect_color/compressed /hazard_rear/zed_node_rear/rgb/image_rect_color/compressed /joy /joy_teleop/cmd_vel /joy_teleop/joy /map /merop/attitude /cmd_vel_merop /merop/joy /odom /navsat/orientation /rec_bag /slipping_broadcaster /stereo_camera/left/image_raw/compressed /stereo_camera/right/image_raw/compressed /tf /tf_static
+
